@@ -20,6 +20,9 @@ printf "\n"
 sleep 0.3
 echo -e $blue "  By virusnet https://github.com/virusnet1       "
 printf "\n"
+apt install postgresql
+service postgresql start
+systemctl enable postgresql
 apt autoremove metasploit-framework
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
   chmod 777 msfinstall && \
